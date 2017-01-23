@@ -8,4 +8,4 @@ RUN npm install --save passport
 RUN npm install --save passport-jwt
 ADD . /app
 
-EXPOSE 3000
+CMD ["node", "app/index.js"]
