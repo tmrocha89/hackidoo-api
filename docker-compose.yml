@@ -1,2 +1,20 @@
-node:
-  build: .  
+api:
+  build: .
+  hostname: hackidoo_express_api
+  container_name: hackidoo_api
+  ports:
+    - 3100:3000
+  links: 
+    - db:mongo
+  environment: 
+    MONGO_CONNECT_STR: "mongodb://mongo/hackidoo"
+  restart: always
+
+db:
+  image: mongo:3.4.1
+  hostname: hackidoo_mongodb
+  container_name: hackidoo_db
+  ports:
+    - 27117:27017
+  command: "--smallfiles --logpath=/dev/null"
+  restart: always
