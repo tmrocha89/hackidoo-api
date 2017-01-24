@@ -8,6 +8,9 @@ api:
     - db:mongo
   environment: 
     MONGO_CONNECT_STR: "mongodb://mongo/hackidoo"
+    NO_UPDATE_NOTIFIER: "true"
+  volumes:
+    - .:/app
   restart: always
 
 db:

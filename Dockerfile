@@ -7,6 +7,8 @@ RUN npm install --save jwt-simple
 RUN npm install --save passport
 RUN npm install --save passport-jwt
 RUN npm install --save mongoose
-ADD . /app
+RUN npm install -g nodemon
 
-CMD ["node", "app/index.js"]
+WORKDIR /app
+
+CMD ["nodemon", "-L", "index.js"]
