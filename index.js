@@ -59,6 +59,7 @@ app.get('/collection/:id/', function(req, res) {
 });
 
 app.post('/collection', function(req, res) {
+    res.send(req.body);
     res.send("saving stuffs");
 });
 
