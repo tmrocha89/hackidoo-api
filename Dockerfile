@@ -8,6 +8,8 @@ RUN npm install --save passport
 RUN npm install --save passport-jwt
 RUN npm install --save mongoose
 RUN npm install -g nodemon
+RUN npm install -g mocha
+RUN npm install --save-dev mockgoose
 
 WORKDIR /app
 
