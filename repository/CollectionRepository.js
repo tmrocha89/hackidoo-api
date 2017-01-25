@@ -5,6 +5,10 @@ var Collection = mongoose.model('Collection');
 
 function CollectionRepository() {
 
+    this._convertDTOToModel = function(dto) {
+
+    };
+
     this.addCollection = function(collectionObj, callback) {
         var collection = new Collection();
         collection.code = code;
