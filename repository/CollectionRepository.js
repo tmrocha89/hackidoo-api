@@ -5,17 +5,28 @@ var Collection = mongoose.model('Collection');
 
 function CollectionRepository() {
 
-    this._convertDTOToModel = function(dto) {
+    this.save = function(collection, callback) {
+        //ToDo: impement
+        console.log("[CollectionRepository] save");
+        return callback(null, collection);
+    }
 
-    };
+    this.get = function(collectionId, callback) {
+        //ToDo: impement
+        console.log("[CollectionRepository] get");
+        return callback(null, {});
+    }
 
-    this.addCollection = function(collectionObj, callback) {
-        var collection = new Collection();
-        collection.code = code;
-        collection.data = recipeObj;
-        return collection.save(function(err) {
-            return callback(err, collection);
-        });
+    this.convertToRecipe = function(collectionDto) {
+        //ToDo: impement
+        console.log("[CollectionRepository] convertToRecipe");
+        return {};
+    }
+
+    this.converToDTO = function(collection) {
+        console.log("[CollectionRepository] converToDTO");
+        //ToDo: impement
+        return {};
     };
 }
 
